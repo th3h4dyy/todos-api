@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { AppErrorCode, AppHttpResponse, HttpStatusCode } from '../models';
+import { AppErrorCode, AppHttpResponse, AppHttpResponseError, HttpStatusCode } from '../models';
 
 export function InternalServerError(res: Response, error: string | Error): Response {
   const body: AppHttpResponse = {
@@ -12,4 +12,12 @@ export function InternalServerError(res: Response, error: string | Error): Respo
     ],
   };
   return res.status(HttpStatusCode.InternalServerError).send(body);
+}
+
+export function BadRequest(res: Response, body?: AppHttpResponse): Response {
+  return body ? res.status(HttpStatusCode.BadRequest).send(body) : res.status(HttpStatusCode.BadRequest).send();
+}
+
+export function Ok(res: Response, body?: AppHttpResponse): Response {
+  return body ? res.status(HttpStatusCode.Ok).send(body) : res.status(HttpStatusCode.Ok).send();
 }
