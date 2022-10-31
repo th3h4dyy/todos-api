@@ -1,8 +1,10 @@
 import { Router, Request, Response, NextFunction } from 'express';
+
 import { BadRequest, CustomValidationErrorFormatter, Ok } from '../shared';
 import { CreateUserInput, UsersDataAccess } from '../users/';
 import { createUserValidator } from '../users/validation';
 import { validationResult } from 'express-validator';
+
 
 export const usersRouter = Router();
 
@@ -20,6 +22,7 @@ usersRouter.post('/signup', createUserValidator, async (req: Request, res: Respo
     if (validationErrors.length) {
       return BadRequest(res, { errors: validationErrors });
     }
+
     const data: CreateUserInput = req.body;
     const result = await UsersDataAccess.create(data);
     if (result.error) {
