@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["eslint", "npm:8.26.0"],\
             ["express", "npm:4.18.2"],\
+            ["express-validator", "npm:6.14.2"],\
             ["helmet", "npm:6.0.0"],\
             ["morgan", "npm:1.10.0"],\
             ["nodemon", "npm:2.0.20"],\
@@ -1578,6 +1579,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["type-is", "npm:1.6.18"],\
             ["utils-merge", "npm:1.0.1"],\
             ["vary", "npm:1.1.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["express-validator", [\
+        ["npm:6.14.2", {\
+          "packageLocation": "./.yarn/cache/express-validator-npm-6.14.2-6fac2a58c2-f19641a8f8.zip/node_modules/express-validator/",\
+          "packageDependencies": [\
+            ["express-validator", "npm:6.14.2"],\
+            ["lodash", "npm:4.17.21"],\
+            ["validator", "npm:13.7.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3571,6 +3583,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["cors", "npm:2.8.5"],\
             ["eslint", "npm:8.26.0"],\
             ["express", "npm:4.18.2"],\
+            ["express-validator", "npm:6.14.2"],\
             ["helmet", "npm:6.0.0"],\
             ["morgan", "npm:1.10.0"],\
             ["nodemon", "npm:2.0.20"],\

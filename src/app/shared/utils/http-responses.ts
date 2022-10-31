@@ -1,5 +1,5 @@
 import { Response } from 'express';
-import { AppErrorCode, AppHttpResponse, AppHttpResponseError, HttpStatusCode } from '../models';
+import { AppErrorCode, AppHttpResponse, HttpStatusCode } from '../models';
 
 export function InternalServerError(res: Response, error: string | Error): Response {
   const body: AppHttpResponse = {

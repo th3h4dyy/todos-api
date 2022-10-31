@@ -1190,6 +1190,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"express-validator@npm:^6.14.2":
+  version: 6.14.2
+  resolution: "express-validator@npm:6.14.2"
+  dependencies:
+    lodash: ^4.17.21
+    validator: ^13.7.0
+  checksum: f19641a8f8bde39ebf9418e8798c22736ffe1c90081f97a4b66d6d0f185bce2c20cbcc170d21c5d10f8fd410bb8de38c31592021be4306b9936bc3c566741dc0
+  languageName: node
+  linkType: hard
+
 "express@npm:^4.18.2":
   version: 4.18.2
   resolution: "express@npm:4.18.2"
@@ -2939,6 +2949,7 @@ __metadata:
     cors: ^2.8.5
     eslint: ^8.26.0
     express: ^4.18.2
+    express-validator: ^6.14.2
     helmet: ^6.0.0
     morgan: ^1.10.0
     nodemon: ^2.0.20
