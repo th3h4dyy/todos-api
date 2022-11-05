@@ -7,7 +7,9 @@ import { User } from './users.model';
 
 User.hasMany(Todo, {
   foreignKey: 'user_id',
+  as: 'todos',
 });
 Todo.belongsTo(User, {
   foreignKey: 'user_id',
+  as: 'user',
 });

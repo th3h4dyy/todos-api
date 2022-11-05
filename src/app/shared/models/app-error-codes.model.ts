@@ -31,4 +31,5 @@ export enum AppErrorCode {
    * @summary e.g. you are trying to create a new product in a category which is not exists in the database.
    */
   RelatedEntityNotFound = 9,
+  ValueNotExist = 10,
 }

@@ -4,8 +4,9 @@ import compression from 'compression';
 import morgan from 'morgan';
 import cors from 'cors';
 import { errorHandler } from '../shared';
-import { Database } from '../shared/';
+import { Database } from '../shared';
 import { usersRelativeRoute, usersRouter } from '../controllers';
+import { todosRelativeRoute, todosRouter } from '../controllers/todos.routes';
 
 function setupDevelopment(app: Application): void {
   app.use(morgan('dev'));
@@ -25,6 +26,7 @@ function setRequestOptions(app: Application): void {
 function registerRoutes(app: Application): void {
   const baseRoute = '/api/';
   app.use(baseRoute + usersRelativeRoute, usersRouter);
+  app.use(baseRoute + todosRelativeRoute, todosRouter);
 }
 
 export function setupServer(app: Application): void {
